@@ -8,21 +8,25 @@
     <link rel="icon" type="image/x-icon" href="/favicon(2).ico">
 </head>
 <body>
-    
-<audio id="backgroundMusic" loop>
+
+<audio id="audioPlayer" loop>
   <source src="1-14. Sugar story.mp3" type="audio/mpeg">
   您的浏览器不支持 audio 元素。
 </audio>
 
-<script>
-// 获取audio元素
-var audio = document.getElementById('backgroundMusic');
+<button onclick="playAudio()">ᕕ(◠ڼ◠)ᕗ</button>
 
-// 当页面加载完毕时自动播放音乐
-window.onload = function() {
-  audio.play();
-};
+<script>
+function playAudio() {
+  var audio = document.getElementById('audioPlayer');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
 </script>
+
     <div class="container">
         <a href="https://unityroom.com/games/dabuchitabemakurugame" class="pink-text">Bear Love Hoshino!!!</a>
     </div>
